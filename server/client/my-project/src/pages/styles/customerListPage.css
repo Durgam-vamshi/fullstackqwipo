@@ -1,0 +1,304 @@
+/* Mobile-first adjustments */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page title */
+.page-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Search container */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.input-search {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-clear {
+  padding: 10px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn-clear:hover {
+  background-color: #dc2626;
+}
+
+/* Sorting headers */
+.sort-header {
+  display: none; /* Hide for mobile */
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.sort-item {
+  cursor: pointer;
+}
+
+.sort-icon {
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+/* Error text */
+.error-text {
+  color: #dc2626;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-page {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background-color: #f3f3f3;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn-page:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Customer details */
+.customer-details {
+  margin-top: 20px;
+  padding: 0 12px;
+}
+
+.customer-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.btn-danger, .btn-secondary, .btn-add, .btn-edit, .btn-save {
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+/* Highlight text */
+.highlight {
+  background-color: #fcd34d;
+  font-weight: 600;
+  padding: 0 2px;
+}
+
+/* Address filters */
+.address-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.input-address-filter {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Address list */
+.address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.address-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  position: relative;
+  word-break: break-word;
+}
+
+.address-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-top: 6px;
+  position: static;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.modal {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.modal h4 {
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.input-address {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Make desktop-specific adjustments for larger screens */
+@media (min-width: 768px) {
+  .sort-header {
+    display: flex;
+  }
+
+  .search-container {
+    flex-direction: row;
+  }
+
+  .address-filters {
+    flex-direction: row;
+  }
+
+  .address-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .address-actions {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+
+/* Toast container customization */
+.Toastify__toast {
+  padding: 16px 20px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 350px;
+  word-break: break-word;
+}
+
+/* Custom content inside the toast */
+.toast-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Buttons */
+.btn-danger {
+  background-color: #e53935; /* Red */
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-danger:hover {
+  background-color: #c62828;
+}
+
+.btn-secondary {
+  background-color: #bdbdbd; /* Gray */
+  color: #333;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #9e9e9e;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .Toastify__toast {
+    font-size: 13px;
+    padding: 12px 16px;
+    max-width: 90%;
+  }
+
+  .toast-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-danger,
+  .btn-secondary {
+    width: 100%;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 768px) {
+.nav-link{
+  color:white;
+}
+}
+
+
+
+
+
+
+

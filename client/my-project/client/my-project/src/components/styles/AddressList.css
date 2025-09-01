@@ -1,0 +1,74 @@
+.address-list-container {
+  width: 100%;
+  overflow-x: auto; /* For mobile horizontal scroll */
+  margin-top: 16px;
+}
+
+/* Table styles */
+.address-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.address-table th,
+.address-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.address-table th {
+  background-color: #f3f4f6; /* Light gray */
+  font-weight: 600;
+}
+
+.address-table tr:nth-child(even) {
+  background-color: #f9fafb; /* Alternating row color */
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit {
+  background-color: #22c55e; /* Green */
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  background-color: #16a34a;
+}
+
+.btn-delete {
+  background-color: #ef4444; /* Red */
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .address-table th,
+  .address-table td {
+    padding: 6px 8px;
+    font-size: 0.875rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
