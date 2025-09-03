@@ -1,135 +1,152 @@
-Customer & Multiple Addresses CRUD Application
+# 📌 Customer & Multiple Addresses CRUD Application  
 
-This project demonstrates end-to-end CRUD operations for managing customers and their multiple addresses using:
+This project demonstrates **end-to-end CRUD operations** for managing customers and their multiple addresses.  
+It uses a **full-stack approach** with:  
 
-Frontend: React.js with React Router
+- ⚛️ **Frontend**: React.js + React Router  
+- 🚀 **Backend**: Node.js + Express.js  
+- 🗄 **Database**: SQLite  
 
-Backend: Node.js with Express.js
+The application supports **mobile** and **web environments**, featuring validation, error handling, navigation, and responsive UI.  
 
-Database: SQLite
+---
 
-The application is designed to work in both mobile and web environments, covering validation, error handling, navigation, and responsive UI.
+## ✨ Features  
 
-🚀 Features
-🔹 Mobile CRUD Operations
+### 📱 Mobile CRUD Operations  
+- ➕ **Create Customer**: Validate inputs (first name, last name, phone, address, city, state, pincode).  
+- 📖 **Read Customer**: Navigate by ID & display profile details.  
+- ✏️ **Update Customer**: Modify details and show confirmation messages.  
+- ❌ **Delete Customer**: Search by ID, confirm deletion, and remove permanently.  
+- 🏠 **Multiple Addresses Management**:  
+  - View all addresses linked to a customer.  
+  - Add, update, delete addresses.  
+  - Mark customers as “Only One Address”.  
+- 🔍 **Search & Filters**: Filter by city, state, or pincode with clear filters.  
+- 📑 **Pagination & Sorting**: Navigate customer lists efficiently.  
 
-Create Customer: Form validation for first name, last name, phone, and address details.
+### 💻 Web CRUD Operations  
+- 🏷 **Customer Dashboard**: Create, view, update, delete customers.  
+- 📦 **Order/Payment/Shipping Info**: Display related data (mock implementation).  
+- 🏠 **Address Management**: Filter, sort, and manage addresses.  
+- 🔎 **Full-text Search**: Search by name, address, email, or phone.  
+- 📱 **Responsive Design**: Mobile-first layout across devices.  
+- ⚠️ **Error Handling & Logging**: Catch and log errors at every step.  
 
-Read Customer: Navigate by ID and display full customer profile.
+---
 
-Update Customer: Modify selected fields and show confirmation messages.
+## 🛠 Tech Stack  
 
-Delete Customer: Search by ID, confirm deletion, and remove permanently.
+**Frontend**  
+- React.js  
+- React Router  
+- Tailwind CSS / CSS Media Queries  
 
-Multiple Addresses Management:
+**Backend**  
+- Node.js  
+- Express.js  
 
-View all addresses linked to a customer.
+**Database**  
+- SQLite (lightweight relational DB)  
 
-Add, update, or delete addresses.
+---
 
-Mark customers with “Only One Address”.
+## 📂 Project Structure  
 
-Search & Filters: Filter customers by city, state, or pincode with clear filters.
+```
 
-Pagination & Sorting: Navigate through customer lists efficiently.
+├── client/                  # React Frontend
+│   ├── src/
+│   │   ├── components/      # Reusable UI components
+│   │   ├── pages/           # CRUD pages (Create, Read, Update, Delete)
+│   │   ├── routes/          # React Router setup
+│   │   ├── services/        # API calls
+│   │   └── App.js
+│   └── package.json
 
-🔹 Web CRUD Operations
+├── server/                  # Node.js Backend
+│   ├── config/              # DB connection (SQLite)
+│   ├── controllers/         # Business logic for CRUD
+│   ├── models/              # SQLite models
+│   ├── routes/              # Express routes
+│   ├── middleware/          # Error handling, validation
+│   ├── app.js
+│   └── package.json
 
-Customer Dashboard: Create, view, update, and delete customer records.
+└── README.md
 
-Order/Payment/Shipping Info: Display customer’s related data (mock implementation).
+````
 
-Address Management: Filter, sort, and manage multiple addresses.
+---
 
-Search Functionality: Full-text search on name, address, email, or phone.
+## ⚙️ Setup Instructions  
 
-Responsive Design: Mobile-first, with adaptive UI across devices.
+### 1️⃣ Clone Repository  
+```bash
+git clone https://github.com/Durgam-vamshi/fullstackqwipo.git
+cd fullstackqwipo
+````
 
-Error Handling & Logging: Capture and log errors at every CRUD step.
+### 2️⃣ Install Dependencies
 
-🛠 Tech Stack
+#### Backend
 
-Frontend:
-
-React.js
-
-React Router
-
-Tailwind CSS / CSS Media Queries (for responsiveness)
-
-Backend:
-
-Node.js
-
-Express.js
-
-Database:
-
-SQLite (lightweight relational DB for demo purposes)
-
-📂 Project Structure
-├── client/                  # React Frontend  
-│   ├── src/  
-│   │   ├── components/      # Reusable UI components  
-│   │   ├── pages/           # CRUD pages (Create, Read, Update, Delete)  
-│   │   ├── routes/          # React Router setup  
-│   │   ├── services/        # API calls  
-│   │   └── App.js  
-│   └── package.json  
-
-├── server/                  # Node.js Backend  
-│   ├── config/              # DB connection (SQLite)  
-│   ├── controllers/         # Business logic for CRUD  
-│   ├── models/              # SQLite models  
-│   ├── routes/              # Express routes  
-│   ├── middleware/          # Error handling, validation  
-│   ├── app.js  
-│   └── package.json  
-
-└── README.md  
-
-⚙️ Setup Instructions
-1. Clone Repository
-git clone https://github.com/your-username/customer-crud-app.git
-cd customer-crud-app
-
-2. Install Dependencies
-Backend
+```bash
 cd server
 npm install
+```
 
-Frontend
+#### Frontend
+
+```bash
 cd ../client
 npm install
+```
 
-3. Run Application
-Start Backend
+### 3️⃣ Run Application
+
+#### Start Backend
+
+```bash
 cd server
 npm start
+```
 
-Start Frontend
+#### Start Frontend
+
+```bash
 cd client
 npm start
+```
 
+🌍 **Frontend** → [http://localhost:3000](http://localhost:3000)
+⚡ **Backend** → [http://localhost:5000](http://localhost:5000)
 
-Frontend will run on http://localhost:3000
+---
 
-Backend will run on http://localhost:5000
+## ✅ Test Cases
 
-🧪 Test Cases
+* [x] Create customer with validation
+* [x] Fetch customer profile by ID
+* [x] Update customer information
+* [x] Delete customer after confirmation
+* [x] Search by city/state/pincode
+* [x] Manage multiple addresses per customer
+* [x] Responsive design (mobile + web)
+* [x] Error handling (DB, validation, network errors)
 
-✅ Create customer with validation
+---
 
-✅ Fetch customer profile by ID
+## 📌 Expectations
 
-✅ Update customer information
+* 🧩 Clean **MVC architecture** in backend
+* ♻️ Reusable React components in frontend
+* ✅ Proper validation & error handling
+* 📜 Clear Git commit history
 
-✅ Delete customer after confirmation
+---
 
-✅ Search by city/state/pincode
+👨‍💻 **Author**: [Durgam Vamshi](https://github.com/Durgam-vamshi)
 
-✅ Manage multiple addresses per customer
+```
 
-✅ Responsive design testing on mobile + web
-
-✅ Error handling (DB, validation, network errors)
